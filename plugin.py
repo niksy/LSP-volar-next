@@ -23,7 +23,7 @@ class LspVolarPlugin(NpmClientHandler):
 
     @classmethod
     def required_node_version(cls) -> str:
-        return '>=16'
+        return '>=18'
 
     @classmethod
     def is_allowed_to_start(
