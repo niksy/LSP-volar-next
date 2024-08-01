@@ -3,10 +3,10 @@
     "settings": [
       {
         "file_patterns": [
-          "/LSP-volar.sublime-settings"
+          "/LSP-volar-next.sublime-settings"
         ],
         "schema": {
-          "$id": "sublime://settings/LSP-volar",
+          "$id": "sublime://settings/LSP-volar-next",
           "definitions": {
             "PluginConfig": {
               "properties": {
@@ -1070,7 +1070,7 @@
               "$ref": "sublime://settings/LSP-plugin-base"
             },
             {
-              "$ref": "sublime://settings/LSP-volar#/definitions/PluginConfig"
+              "$ref": "sublime://settings/LSP-volar-next#/definitions/PluginConfig"
             }
           ]
         }
@@ -1085,8 +1085,8 @@
               "properties": {
                 "LSP": {
                   "properties": {
-                    "LSP-volar": {
-                      "$ref": "sublime://settings/LSP-volar#/definitions/PluginConfig"
+                    "LSP-volar-next": {
+                      "$ref": "sublime://settings/LSP-volar-next#/definitions/PluginConfig"
                     }
                   }
                 }

@@ -169,7 +169,7 @@ class VirtualFilesDataProvider(TreeDataProvider):
 
 
 class LspVolarShowVirtualFilesCommand(LspTextCommand):
-    session_name = 'LSP-volar'
+    session_name = 'LSP-volar-next'
 
     def run(self, edit: sublime.Edit) -> None:
         sublime.set_timeout_async(self.run_async)
@@ -194,7 +194,7 @@ class LspVolarShowVirtualFilesCommand(LspTextCommand):
         session = weaksession()
         if not session:
             return
-        sheet_name = 'Virtual Files (LSP-volar)'
+        sheet_name = 'Virtual Files (LSP-volar-next)'
         source_file_uri = uri_from_view(self.view)
         elements = [virtual_file]
         data_provider = VirtualFilesDataProvider(weaksession, source_file_uri, elements)
@@ -206,7 +206,7 @@ class LspVolarShowVirtualFilesCommand(LspTextCommand):
 
 
 class LspVolarOpenVirtualFileCommand(LspWindowCommand):
-    session_name = 'LSP-volar'
+    session_name = 'LSP-volar-next'
 
     def run(self, uri: str, file_name: str, event: Optional[dict] = None) -> None:
         sublime.set_timeout_async(lambda: self.run_async(uri, file_name))

@@ -18,8 +18,8 @@
 		// Reverse priority for tsconfig pickup.
 		"reverseConfigFilePriority": false,
 		// Specify the `typescript.tsdk` to tsserverlibrary.js.
-		// If not specified LSP-volar will use the typescript from the workspace if it exist,
-		// else the typescript bundled with LSP-volar will be used.
+		// If not specified LSP-volar-next will use the typescript from the workspace if it exist,
+		// else the typescript bundled with LSP-volar-next will be used.
 		// "typescript.tsdk": "/path/to/tsserverlibrary.js",
 	},
 	"settings": {
