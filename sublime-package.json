@@ -13,31 +13,18 @@
                 "initializationOptions": {
                   "additionalProperties": false,
                   "properties": {
-                    "additionalExtensions": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "default": [],
-                      "description": "List any additional file extensions that should be processed as Vue files."
-                    },
-                    "diagnosticModel": {
-                      "type": "integer",
-                      "default": 2,
+                    "vue.hybridMode": {
+                      "type": "boolean",
+                      "default": true,
                       "enum": [
-                        1,
-                        2
+                        true,
+                        false
                       ],
                       "enumDescriptions": [
-                        "Diagnostic push by language server.",
-                        "Diagnostic pull by language client."
+                        "Enable TypeScript Plugin/Hybrid Mode.",
+                        "Disable TypeScript Plugin/Hybrid Mode."
                       ],
-                      "description": "Diagnostic update model."
-                    },
-                    "maxFileSize": {
-                      "type": "number",
-                      "default": 20971520,
-                      "description": "Maximum file size for Vue Server to load. (default: 20MB)"
+                      "description": "Vue language server only handles CSS and HTML language support, and tsserver takes over TS language support via TS plugin."
                     },
                     "typescript.tsdk": {
                       "type": "string",

@@ -1,11 +1,6 @@
 {
 	"initializationOptions": {
-		// List any additional file extensions that should be processed as Vue files.
-		"additionalExtensions": [],
-		// Diagnostic update model. (1 - Push, 2 - Pull)
-		"diagnosticModel": 2,
-		// Maximum file size for Vue Server to load. (default: 20MB)
-		"maxFileSize": 20971520,
+		"vue.hybridMode": true,
 		// Specify the `typescript.tsdk` to tsserverlibrary.js.
 		// If not specified LSP-volar-next will use the typescript from the workspace if it exist,
 		// else the typescript bundled with LSP-volar-next will be used.
