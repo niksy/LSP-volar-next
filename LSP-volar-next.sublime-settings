@@ -21,30 +21,19 @@
 		//  - "kebab": :kebab-case="..."
 		//  - "pascal": :camelCase="..."
 		"vue.complete.casing.props": "autoKebab",
-		// Normalize import name for auto import. ("myCompVue" -> "MyComp")
-		"vue.features.complete.normalizeComponentImportName": true,
+		// Show inlay hints for destructured prop.
+		"vue.inlayHints.destructuredProps": false,
 		// Show inlay hints for missing required props.
 		"vue.inlayHints.missingProps": false,
 		// Show inlay hints for event argument in inline handlers.
 		"vue.inlayHints.inlineHandlerLeading": false,
 		// Show inlay hints for component options wrapper for type support.
-		"vue.inlayHints.optionsWrapper": true,
-		// Whether to have initial indent.
-		"volar.format.initialIndent": {
-			"css": false,
-			"html": true,
-			"jade": false,
-			"javascript": false,
-			"javascriptreact": false,
-			"json": false,
-			"json5": false,
-			"jsonc": false,
-			"less": false,
-			"sass": false,
-			"scss": false,
-			"typescript": false,
-			"typescriptreact": false,
-		},
+		"vue.inlayHints.optionsWrapper": false,
+		// Show inlay hints for v-bind shorthand.
+		"vue.inlayHints.vBindShorthand": false,
+		"vue.format.template.initialIndent": true,
+		"vue.format.style.initialIndent": false,
+		"vue.format.script.initialIndent": false,
 		// javascript inlay hint
 		"javascript.inlayHints.enumMemberValues.enabled": false,
 		"javascript.inlayHints.functionLikeReturnTypes.enabled": false,

@@ -35,6 +35,77 @@
                 "settings": {
                   "additionalProperties": false,
                   "properties": {
+                    "vue.complete.casing.tags": {
+                      "type": "string",
+                      "enum": [
+                        "autoKebab",
+                        "autoPascal",
+                        "kebab",
+                        "pascal"
+                      ],
+                      "enumDescriptions": [
+                        "Auto Detect from Content (Fallback to <kebab-case> if detect failed)",
+                        "Auto Detect from Content  (Fallback to <PascalCase> if detect failed)",
+                        "<kebab-case>",
+                        "<PascalCase>"
+                      ],
+                      "default": "autoPascal",
+                      "description": "Preferred tag name case."
+                    },
+                    "vue.complete.casing.props": {
+                      "type": "string",
+                      "enum": [
+                        "autoKebab",
+                        "autoCamel",
+                        "kebab",
+                        "camel"
+                      ],
+                      "enumDescriptions": [
+                        "Auto Detect from Content (Fallback to :kebab-case=\"...\" if detect failed)",
+                        "Auto Detect from Content (Fallback to :camelCase=\"...\" if detect failed)",
+                        ":kebab-case=\"...\"",
+                        ":camelCase=\"...\""
+                      ],
+                      "default": "autoKebab",
+                      "description": "Preferred attr name case."
+                    },
+                    "vue.inlayHints.destructuredProps": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "Show inlay hints for destructured prop."
+                    },
+                    "vue.inlayHints.missingProps": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "Show inlay hints for missing required props."
+                    },
+                    "vue.inlayHints.inlineHandlerLeading": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "Show inlay hints for event argument in inline handlers."
+                    },
+                    "vue.inlayHints.optionsWrapper": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "Show inlay hints for component options wrapper for type support."
+                    },
+                    "vue.inlayHints.vBindShorthand": {
+                      "type": "boolean",
+                      "default": false,
+                      "description": "Show inlay hints for v-bind shorthand."
+                    },
+                    "vue.format.template.initialIndent": {
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "vue.format.style.initialIndent": {
+                      "type": "boolean",
+                      "default": false
+                    },
+                    "vue.format.script.initialIndent": {
+                      "type": "boolean",
+                      "default": false
+                    },
                     "emmet.excludeLanguages": {
                       "default": [
                         "markdown"
@@ -568,141 +639,6 @@
                       "default": true,
                       "description": "Show references to MDN in hover.",
                       "type": "boolean"
-                    },
-                    "vue.complete.casing.tags": {
-                      "type": "string",
-                      "enum": [
-                        "autoKebab",
-                        "autoPascal",
-                        "kebab",
-                        "pascal"
-                      ],
-                      "enumDescriptions": [
-                        "Auto Detect from Content (Fallback to <kebab-case> if detect failed)",
-                        "Auto Detect from Content  (Fallback to <PascalCase> if detect failed)",
-                        "<kebab-case>",
-                        "<PascalCase>"
-                      ],
-                      "default": "autoPascal",
-                      "description": "Preferred tag name case."
-                    },
-                    "vue.complete.casing.props": {
-                      "type": "string",
-                      "enum": [
-                        "autoKebab",
-                        "autoCamel",
-                        "kebab",
-                        "camel"
-                      ],
-                      "enumDescriptions": [
-                        "Auto Detect from Content (Fallback to :kebab-case=\"...\" if detect failed)",
-                        "Auto Detect from Content (Fallback to :camelCase=\"...\" if detect failed)",
-                        ":kebab-case=\"...\"",
-                        ":camelCase=\"...\""
-                      ],
-                      "default": "autoKebab",
-                      "description": "Preferred attr name case."
-                    },
-                    "vue.features.complete.normalizeComponentImportName": {
-                      "type": "boolean",
-                      "default": true,
-                      "description": "Normalize import name for auto import. (\"myCompVue\" -> \"MyComp\")"
-                    },
-                    // "vue.features.autoInsert.parentheses": {
-                    //   "type": "boolean",
-                    //   "default": true,
-                    //   "description": "Auto-wrap `()` to As Expression in interpolations for fix issue #520."
-                    // },
-                    // "vue.features.autoInsert.dotValue": {
-                    //   "type": "boolean",
-                    //   "default": false,
-                    //   "description": "Auto-complete Ref value with `.value`."
-                    // },
-                    // "vue.features.autoInsert.bracketSpacing": {
-                    //   "type": "boolean",
-                    //   "default": true,
-                    //   "description": "Auto add space between double curly brackets: {{|}} -> {{ | }}"
-                    // },
-                    "vue.inlayHints.missingProps": {
-                      "type": "boolean",
-                      "default": false,
-                      "description": "Show inlay hints for missing required props."
-                    },
-                    "vue.inlayHints.inlineHandlerLeading": {
-                      "type": "boolean",
-                      "default": false,
-                      "description": "Show inlay hints for event argument in inline handlers."
-                    },
-                    "vue.inlayHints.optionsWrapper": {
-                      "type": "boolean",
-                      "default": true,
-                      "description": "Show inlay hints for component options wrapper for type support."
-                    },
-                    "volar.diagnostics.delay": {
-                      "default": 200,
-                      "description": "Delay time for diagnostics.",
-                      "type": "number"
-                    },
-                    "volar.format.initialIndent": {
-                      "type": "object",
-                      "description": "Whether to have initial indent.",
-                      "default": {
-                        "html": true
-                      },
-                      "properties": {
-                        "html": {
-                          "type": "boolean",
-                          "default": true
-                        },
-                        "typescript": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "javascript": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "typescriptreact": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "javascriptreact": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "css": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "scss": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "less": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "sass": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "jade": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "json": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "jsonc": {
-                          "type": "boolean",
-                          "default": false
-                        },
-                        "json5": {
-                          "type": "boolean",
-                          "default": false
-                        }
-                      }
                     },
                     "typescript.preferences.autoImportFileExcludePatterns": {
                       "items": {
