@@ -21,11 +21,6 @@
                       "default": [],
                       "description": "List any additional file extensions that should be processed as Vue files."
                     },
-                    "configFilePath": {
-                      "type": "string",
-                      "default": "./volar.config.js",
-                      "description": "Path to volar.config.js."
-                    },
                     "diagnosticModel": {
                       "type": "integer",
                       "default": 2,
@@ -39,36 +34,14 @@
                       ],
                       "description": "Diagnostic update model."
                     },
-                    "fullCompletionList": {
-                      "type": "boolean",
-                      "default": false,
-                      "description": "Enable this option if you want to get complete CompletionList in language client. (Disable for better performance)"
-                    },
                     "maxFileSize": {
                       "type": "number",
                       "default": 20971520,
                       "description": "Maximum file size for Vue Server to load. (default: 20MB)"
                     },
-                    "json.customBlockSchemaUrls": {
-                      "type": "object"
-                    },
-                    "reverseConfigFilePriority": {
-                      "type": "boolean",
-                      "default": false,
-                      "description": "Reverse priority for tsconfig pickup."
-                    },
                     "typescript.tsdk": {
                       "type": "string",
                       "description": "Path to tsserver's lib directory."
-                    },
-                    "ignoreTriggerCharacters": {
-                      "type": "array",
-                      "items": {
-                        "type": "string",
-                        "maxLength": 1
-                      },
-                      "default": [],
-                      "description": "Defines which auto-complete popup trigger characters that Volar defines are allowed.\nBy default all Volar trigger characters are disabled as ST does a better job."
                     },
                   },
                 },
@@ -1192,6 +1165,10 @@
                   "default": false,
                   "markdownDescription": "Generate slots type for `JSX.ElementChildrenAttribute`."
                 },
+                "jsxTemplates": {
+                  "deprecated": true,
+                  "description": "Deprecated since v1.6.0."
+                },
                 "strictTemplates": {
                   "type": "boolean",
                   "default": false,
@@ -1263,6 +1240,7 @@
                 "experimentalUseElementAccessInTemplate": {
                   "type": "boolean",
                   "default": false,
+                  "deprecated": true,
                   "markdownDescription": "https://github.com/vuejs/language-tools/issues/997"
                 },
                 "experimentalModelPropName": {

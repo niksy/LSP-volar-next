@@ -2,21 +2,10 @@
 	"initializationOptions": {
 		// List any additional file extensions that should be processed as Vue files.
 		"additionalExtensions": [],
-		// Path to volar.config.js.
-		"configFilePath": "./volar.config.js",
 		// Diagnostic update model. (1 - Push, 2 - Pull)
 		"diagnosticModel": 2,
-		// Enable this option if you want to get complete CompletionList in language client.
-		// (Disable for better performance)
-		"fullCompletionList": false,
 		// Maximum file size for Vue Server to load. (default: 20MB)
 		"maxFileSize": 20971520,
-		// Defines which auto-complete popup trigger characters that Volar defines are allowed.
-		// By default all Volar trigger characters are disabled as ST does a better job.
-		"ignoreTriggerCharacters": [],
-		"json.customBlockSchemaUrls": {},
-		// Reverse priority for tsconfig pickup.
-		"reverseConfigFilePriority": false,
 		// Specify the `typescript.tsdk` to tsserverlibrary.js.
 		// If not specified LSP-volar-next will use the typescript from the workspace if it exist,
 		// else the typescript bundled with LSP-volar-next will be used.
